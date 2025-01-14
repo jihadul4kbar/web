@@ -22,3 +22,9 @@
   justify-content: center;
 }
 
+.icon{
+  display: inline-block; 
+  font-size: 40px; 
+  color: #ffffff;
+}
+

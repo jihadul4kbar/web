@@ -11,19 +11,19 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jihadul Akbar',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Lecturer of STMIK Lombok',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://jihadul4kbar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/my-doc-website/',
+  baseUrl: '/web/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'jihadul4kbar', // Usually your GitHub org/user name.
-  projectName: 'my-doc-website', // Usually your repo name.
+  projectName: 'web', // Usually your repo name.
   deploymentBranch: "gh-pages",
 
   onBrokenLinks: 'throw',
