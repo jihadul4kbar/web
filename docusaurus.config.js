@@ -91,6 +91,7 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/project', label: 'Project', position: 'right'},
+          {to: '/resume', label: 'Resume', position: 'right'},
           {to: '/blog', label: 'Blog', position: 'right'},
           {
             href: 'https://github.com/jihadul4kbar',

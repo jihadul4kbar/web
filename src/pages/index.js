@@ -4,9 +4,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import DocusaurusImageUrl from '@site/static/img/jihadulakbar.png';
-
-
-import Heading from '@theme/Heading';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+library.add(fab, faCheckSquare, faCoffee);
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -14,31 +16,27 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-      <img src={DocusaurusImageUrl} alt="Jihadul Akbar" style={{width: 300}}/>
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
+      <img src={DocusaurusImageUrl} alt="Jihadul Akbar" style={{width: 700}}/>
         <div className={styles.buttons}>
-          <Link
+          <Link className={styles.icon}
             to="https://scholar.google.com/citations?user=iLr5dMcAAAAJ">
-            <span className={styles.icon}>🌏︎</span>
+              <FontAwesomeIcon icon="fa-solid fa-globe" size='2x'/>
           </Link>
-          <Link
+          <Link className={styles.icon}
             to="https://sinta.kemdikbud.go.id/authors/profile/6890356">
-            <span className={styles.icon}>🕮</span>
+              <FontAwesomeIcon icon="fa-solid fa-book"  size='2x'/>
           </Link>
-          <Link
+          <Link className={styles.icon}
             to="https://www.facebook.com/people/Jihadul-Akbar/pfbid02pSVhvKmsYz1DyFdyRJ6Gqr4whgtd9PgbbyBdjhnm5Q66Pd5g2CpCAmfBzKDCc5Jvl/">
-            <span className={styles.icon}>🕮</span>
+           <FontAwesomeIcon icon="fa-brands fa-square-facebook"  size='2x' />
           </Link>
-          <Link
+          <Link className={styles.icon}
             to="https://x.com/Jihadul4kbar">
-            <span className={styles.icon}>x</span>
+              <FontAwesomeIcon icon="fa-solid fa-x"  size='2x' />
             </Link>
-          <Link
-            to="https://www.linkedin.com/in/jihadul-akbar-22553a105/">
-            <span className={styles.icon}>🕮</span>
-            </Link>
+          <a className={styles.icon} href="https://www.linkedin.com/in/jihadul-akbar-22553a105/">
+          <FontAwesomeIcon icon="fa-brands fa-linkedin" size='2x' />
+          </a>
         </div>
       </div>
     </header>
