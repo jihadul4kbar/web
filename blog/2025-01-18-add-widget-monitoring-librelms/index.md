@@ -1,8 +1,8 @@
 ---
-slug: welcome
-title: Welcome
-authors: [jihadul4kbar, hadyanwijaya]
-tags: [facebook, hello, docusaurus]
+slug: Add widgets monitoring port on Libre LMS
+title: Setup widgets for monitoring port on LibreLMS
+authors: [jihadul4kbar, hadyanwijaya, hairulfhm]
+tags: [tutorial, libreLMS, Network]
 ---
 
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
@@ -22,7 +22,6 @@ The blog post date can be extracted from filenames, such as:
 
 A blog post folder can be convenient to co-locate blog post images:
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
 
 The blog supports tags as well!
 

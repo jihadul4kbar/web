@@ -1,7 +1,7 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+tutorial:
+  label: tutorial
+  permalink: /Tutorial
+  description: Tutorial peyelesian masalah dari aktivitas kerja.
 
 hello:
   label: Hello
