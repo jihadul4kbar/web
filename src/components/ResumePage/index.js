@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const FeatureList = [
   {
     title: 'Education',
+    ikon: 'fa-solid fa-graduation-cap',
     description: (
       <>
       <b>Universitas Amikom Yogyakarta</b><br></br>
@@ -43,7 +45,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'TEACHING EXPERIENCE',
+    title: 'Teaching Experience',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -53,7 +55,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'PUBLICATIONS',
+    title: 'Publications',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -63,7 +65,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'CONFERENCE PRESENTATIONS',
+    title: 'Conference Presentations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -74,10 +76,11 @@ const FeatureList = [
   }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--12')}>
       <div className="text--left padding-horiz--md">
+      <FontAwesomeIcon icon={icon} />
         <Heading as="h2">{title}</Heading>
         <p>{description}</p>
       </div>
