@@ -186,21 +186,21 @@ Middleware ```role:admin,petugas```: Hanya untuk user role admin dan petugas.
 
 ### 6. Menambah user ke dalam tabel user berdasarkan role
 jalankan perintah pada terminal 
-```
+```php
 php artisan tinker
 ```
 
 selanjutnya tambahkan user dengan perintah berikut 
-```
+```php
 DB::table('users')->insert(['name' => 'Admin','email' => 'admin@contoh.com','password' => Hash::make('12345678'),'role' => 'admin']);
 ```
 perintah untuk menambah user dengan nama ```Admin, email admin@contoh.com, password 12345678 dan role admin```
 
-```
+```php
 DB::table('users')->insert(['name' => 'Petugas','email' => 'petugas@contoh.com','password' => Hash::make('12345678'),'role' => 'petugas']);
 ```
 perintah untuk menambah user dengan nama ```Petugas, email petugas@contoh.com, password 12345678 dan role petugas```
-```
+```php
 DB::table('users')->insert(['name' => 'Pimpinan','email' => 'pimpinan@contoh.com','password' => Hash::make('12345678'),'role' => 'pimpinan']);
 ```
 perintah untuk menambah user dengan nama ```Pimpinan, email pimpinan@contoh.com, password 12345678 dan role pimpinan```
@@ -274,28 +274,28 @@ membuat halaman login pada folder auth dengan nama login.blade.php
 ```
 Selanjutnya membuat halaman dashbord.blade.php 
 ```php title="resources\views\dashbord.blade.php"
-<h3>Selamat datang {{ auth()->user()->name }}</h3>
+<h3>Selamat datang {{ auth()->user()->name }}</h3><br>
       Role : {{ auth()->user()->role }}
-  </div>
 
-  // untuk menamilkan menu berdasarkan user login 
 
-  @if(auth()->user()isAdmin())
-  Menu Untuk Admin
+
+
+  @if(auth()->user()->isAdmin())
+  <p>Menu Untuk Admin</p><br>
     <a href="">Menu Untuk Admin</a>
   @endif
         
-  @if(auth()->user()isPetugas())
-    Menu Untuk Pegugas
+  @if(auth()->user()->isPetugas())
+    <p>Menu Untuk Pegugas</p><br>
     <a href="">Menu Untuk Petugas</a>
   @endif
 
-  @if(auth()->user()isPimpinan())
-    Menu Untuk Pimpinan
+  @if(auth()->user()->isPimpinan())
+    <p>Menu Untuk Pimpinan</p><br>
     <a href="">Menu Untuk pimpinan</a>
   @endif
 
-  //link untuk logout
+<br>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
         <button type="submit">Logout</button>
@@ -321,7 +321,7 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-    });
+    })->name('dashboard');
     // Khusus admin
     Route::middleware(['role:admin'])->group(function () {
         Route::get('/admin', function () {
